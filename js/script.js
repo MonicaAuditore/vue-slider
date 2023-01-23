@@ -44,6 +44,8 @@ console.log(slides);
 //-----------------------------------------
 
 const { createApp } = Vue;
+let th = document.getElementById("th");
+// th.classList.add("active");
 
 createApp({
   data() {
@@ -72,6 +74,9 @@ createApp({
         "Marvel's Avengers",
       ],
 
+      classActive: "active",
+      classthumb: "thumb",
+
       text: [
         "Experience the rise of Miles Morales as the new hero masters incredible, explosive new powers to become his own Spider-Man.",
         "Go dimension-hopping with Ratchet and Clank as they take on an evil emperor from another reality.",
@@ -80,8 +85,10 @@ createApp({
         "Marvel's Avengers is an epic, third-person, action-adventure game that combines an original, cinematic story with single-player and co-operative gameplay.",
       ],
       activeIndex: 0,
+      // thumbnailsCorrente: 0,
     };
   },
+
   methods: {
     nextImg() {
       if (this.activeIndex == this.images.length - 1) {
@@ -100,3 +107,21 @@ createApp({
     },
   },
 }).mount("#app");
+
+// let thumbnailsCorrente = 0;
+
+// allthumbnails[0].classList.add("noShadow");
+
+// frecciaDestra.addEventListener("click", function () {
+//   if (thumbnailsCorrente < allthumbnails.length - 1) {
+//     allthumbnails[thumbnailsCorrente].classList.remove("noShadow");
+
+//     thumbnailsCorrente = thumbnailsCorrente + 1;
+
+//     allthumbnails[thumbnailsCorrente].classList.add("noShadow");
+//   } else if (thumbnailsCorrente == allthumbnails.length - 1) {
+//     allthumbnails[thumbnailsCorrente].classList.remove("noShadow");
+//     thumbnailsCorrente = 0;
+//     allthumbnails[thumbnailsCorrente].classList.add("noShadow");
+//   }
+// });

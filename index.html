@@ -33,9 +33,15 @@
           <div class="thumbs">
             <div class="prev"><button @click="prevImg()">Prev</button></div>
             <div class="next"><button @click="nextImg()">Next</button></div>
-
-            <div class="thumb" v-for="img in thumbs">
-              <img :src="img" />
+            <div id="containerTh">
+              <div
+                id="th"
+                class="thumb"
+                :class="index == activeIndex ? 'active' : ''  "
+                v-for="(img, index) in thumbs"
+              >
+                <img :src="img" />
+              </div>
             </div>
           </div>
         </div>
