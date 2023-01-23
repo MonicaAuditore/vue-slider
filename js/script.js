@@ -45,7 +45,6 @@ console.log(slides);
 
 const { createApp } = Vue;
 let th = document.getElementById("th");
-// th.classList.add("active");
 
 createApp({
   data() {
@@ -107,21 +106,3 @@ createApp({
     },
   },
 }).mount("#app");
-
-// let thumbnailsCorrente = 0;
-
-// allthumbnails[0].classList.add("noShadow");
-
-// frecciaDestra.addEventListener("click", function () {
-//   if (thumbnailsCorrente < allthumbnails.length - 1) {
-//     allthumbnails[thumbnailsCorrente].classList.remove("noShadow");
-
-//     thumbnailsCorrente = thumbnailsCorrente + 1;
-
-//     allthumbnails[thumbnailsCorrente].classList.add("noShadow");
-//   } else if (thumbnailsCorrente == allthumbnails.length - 1) {
-//     allthumbnails[thumbnailsCorrente].classList.remove("noShadow");
-//     thumbnailsCorrente = 0;
-//     allthumbnails[thumbnailsCorrente].classList.add("noShadow");
-//   }
-// });
