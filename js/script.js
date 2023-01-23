@@ -76,7 +76,7 @@ createApp({
   },
   methods: {
     nextImg() {
-      if (this.activeIndex == this.images.length - 1 && this.title.length - 1) {
+      if (this.activeIndex == this.images.length - 1) {
         this.activeIndex = 0;
       } else {
         this.activeIndex++;
