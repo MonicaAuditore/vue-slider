@@ -42,7 +42,7 @@ const slides = [
 console.log(slides);
 
 //-----------------------------------------
-
+//all'interno dell'oggetto vue vado a prendere la proprietà
 const { createApp } = Vue;
 let th = document.getElementById("th");
 
@@ -73,6 +73,8 @@ createApp({
         "Marvel's Avengers",
       ],
 
+      active: false,
+      clicked: false,
       classActive: "active",
       classthumb: "thumb",
 
@@ -103,5 +105,11 @@ createApp({
         this.activeIndex--;
       }
     },
+
+    // thumbnailClasses(index) {
+    //   if (this.activeIndex == index) {
+    //     return "active";
+    //   }
+    // },
   },
 }).mount("#app");
