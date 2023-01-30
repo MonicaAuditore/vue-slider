@@ -59,6 +59,13 @@ createApp({
       }
     },
   },
+  mounted() {
+    setInterval(this.nextSlide, 3000);
+    //oppure
+    // setInterval(() => {
+    //   this.nextSlide();
+    // }, 3000);
+  },
 }).mount("#app");
 
 // const slidesContainer = document.querySelector(".slides");

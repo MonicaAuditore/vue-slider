@@ -31,6 +31,8 @@ createApp({
           text: "Descrizione img Cinque",
         },
       ],
+
+      autoplay: null,
     };
   },
   methods: {
@@ -58,6 +60,23 @@ createApp({
         this.currentSlide++;
       }
     },
+
+    mouseEnterSlider() {
+      this.autoplay = setInterval(this.nextSlide, 3000);
+    },
+
+    mouseLeaveSlider() {
+      clearInterval(this.autoplay);
+      this.autoplay;
+    },
+  },
+  //autoplay
+  mounted() {
+    // setInterval(this.nextSlide, 3000);
+    //oppure
+    // setInterval(() => {
+    //   this.nextSlide();
+    // }, 3000);
   },
 }).mount("#app");
 

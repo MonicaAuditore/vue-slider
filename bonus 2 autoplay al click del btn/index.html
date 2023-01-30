@@ -60,12 +60,14 @@
 
             <div
               class="thumbnail"
+              @click="currentSlide = index"
               v-for="(singleThumbnail, index) in slides"
               :class="{'active' : (currentSlide == index)}"
               :style="'height: ' + (100 / slides.length) + '%'"
             >
               <img :src="singleThumbnail.image" :alt="singleThumbnail.title" />
             </div>
+            <!-- La thumbnail cambia al click impostando currentSlide a index -->
           </div>
           <div class="controls">
             <span class="prev" @click="prevSlide()"
