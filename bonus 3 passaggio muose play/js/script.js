@@ -36,15 +36,6 @@ createApp({
     };
   },
   methods: {
-    //Modo alternativo per aggiungere la classe, richiamare la funzione a : class="" e passargli index come argomento:
-    // thumbnailClasses(i) {
-    //   if (this.currentSlide == i) {
-    //     return "active";
-    //   } else {
-    //     return "";
-    //   }
-    // },
-
     prevSlide() {
       if (this.currentSlide == 0) {
         this.currentSlide = this.slides.length - 1;
@@ -70,77 +61,6 @@ createApp({
       this.autoplay;
     },
   },
-  //autoplay
-  mounted() {
-    // setInterval(this.nextSlide, 3000);
-    //oppure
-    // setInterval(() => {
-    //   this.nextSlide();
-    // }, 3000);
-  },
+
+  mounted() {},
 }).mount("#app");
-
-// const slidesContainer = document.querySelector(".slides");
-// const thumbnailsContainer = document.querySelector(".thumbnails");
-// let currentSlide = 0;
-
-// images.forEach((singleImage) => {
-//   console.log(singleImage);
-//   const newSlide = document.createElement("div");
-//   newSlide.classList.add("slide");
-//   newSlide.innerHTML = `
-//   <img src="${singleImage.image}" alt="${singleImage.title}" />
-//   <div class="texts">
-//     <h3>${singleImage.title}</h3>
-//     <p>${singleImage.text}</p>
-//   </div>
-// `;
-//   slidesContainer.append(newSlide);
-
-//   // -----------------------------------
-
-//   const newThumbnail = document.createElement("div");
-//   newThumbnail.classList.add("thumbnail");
-//   newThumbnail.style.height = 100 / images.length + "%";
-//   newThumbnail.innerHTML = `
-//   <img src="${singleImage.image}" alt="${singleImage.title}" />
-
-// `;
-//   thumbnailsContainer.append(newThumbnail);
-// });
-
-// const allSlides = document.querySelectorAll(".slide");
-// // console.log("allSlides", allSlides);
-// allSlides[currentSlide].classList.add("active");
-
-// const allThumbnails = document.querySelectorAll(".thumbnail");
-// allThumbnails[currentSlide].classList.add("active");
-
-// const prevButton = document.querySelector(".prev");
-
-// prevButton.addEventListener("click", () => {
-//   allSlides[currentSlide].classList.remove("active");
-//   allThumbnails[currentSlide].classList.remove("active");
-
-//   if (currentSlide > 0) {
-//     currentSlide--;
-//   } else {
-//     currentSlide = images.length - 1;
-//   }
-//   allSlides[currentSlide].classList.add("active");
-//   allThumbnails[currentSlide].classList.add("active");
-// });
-
-// const nextButton = document.querySelector(".next");
-
-// nextButton.addEventListener("click", () => {
-//   allSlides[currentSlide].classList.remove("active");
-//   allThumbnails[currentSlide].classList.remove("active");
-//   if (currentSlide < images.length - 1) {
-//     currentSlide++;
-//   } else {
-//     currentSlide = 0;
-//   }
-//   allSlides[currentSlide].classList.add("active");
-//   allThumbnails[currentSlide].classList.add("active");
-// });

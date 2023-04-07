@@ -22,19 +22,6 @@
       <main>
         <div class="slider">
           <div class="slides">
-            <!-- Soluzione con v-for ---
-              <div
-              class="slide"
-              v-for="(singleImage, index) in slides"
-              :class="(currentSlide == index) ? 'active' : ''"
-            >
-              <img :src="singleImage.image" :alt="singleImage.title" />
-              <div class="texts">
-                <h3>{{singleImage.title}}</h3>
-                <p>{{singleImage.text}}</p>
-              </div>
-            </div> -->
-
             <!-- Soluzione con l'accesso all'elemento dell'array -->
             <div class="slide active">
               <img
@@ -48,16 +35,6 @@
             </div>
           </div>
           <div class="thumbnails">
-            <!-- Sintassi alternativa per aggiunta classe active --
-              <div
-              class="thumbnail"
-              :class="(currentSlide == index) ? 'active' : ''"
-              v-for="(singleThumbnail, index) in slides"
-              :style="'height: ' + (100 / slides.length) + '%'"
-            >
-              <img :src="singleThumbnail.image" :alt="singleThumbnail.title" />
-            </div> -->
-
             <div
               class="thumbnail"
               @click="currentSlide = index"
